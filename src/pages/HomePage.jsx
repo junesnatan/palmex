@@ -55,7 +55,7 @@ export default function HomePage({ setActivePage }) {
                   onClick={() => navigateTo('contact')}
                   className="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-base transition-all shadow-lg shadow-emerald-950/40 active:scale-95"
                 >
-                  <span>Étudier Mon Investissement</span>
+                  <span>Prendre Contact</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
 
@@ -448,7 +448,7 @@ export default function HomePage({ setActivePage }) {
                 onClick={() => navigateTo('contact')}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shrink-0"
               >
-                <span>Demander une Étude Prévisionnelle</span>
+                <span>Nous Contacter</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
