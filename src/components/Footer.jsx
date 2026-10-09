@@ -1,20 +1,14 @@
 import React from 'react';
 import { Phone, MapPin, Mail, Sprout } from 'lucide-react';
-import { siteConfig, navLinks } from '../data/siteData';
+import { siteConfig } from '../data/siteData';
 
-export default function Footer({ setActivePage }) {
-  const handleNavClick = (pageId) => {
-    setActivePage(pageId);
-    window.location.hash = pageId;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+export default function Footer() {
   return (
-    <footer className="bg-palm-950 text-white border-t border-palm-900/80 py-8">
+    <footer className="bg-palm-950 text-white border-t border-palm-900/80 py-7">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Ligne principale compacte */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-palm-900/60">
+        {/* Ligne unique compacte et épurée */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-5">
           
           {/* Logo compact */}
           <div className="flex items-center gap-3">
@@ -31,7 +25,7 @@ export default function Footer({ setActivePage }) {
             </div>
           </div>
 
-          {/* Coordonnées rapides en ligne */}
+          {/* Coordonnées directes */}
           <div className="flex flex-wrap items-center justify-center gap-5 text-xs text-slate-300">
             <a
               href={`tel:${siteConfig.phoneRaw}`}
@@ -59,22 +53,11 @@ export default function Footer({ setActivePage }) {
             </div>
           </div>
 
-        </div>
-
-        {/* Liens rapides & Copyright compact */}
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
-          <div className="flex flex-wrap gap-4">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNavClick(link.id)}
-                className="hover:text-emerald-400 transition-colors"
-              >
-                {link.label}
-              </button>
-            ))}
+          {/* Copyright sobre (Zéro lien de navigation) */}
+          <div className="text-[11px] text-slate-500 text-center md:text-right">
+            © {new Date().getFullYear()} Palmex. Tous droits réservés.
           </div>
-          <p>© {new Date().getFullYear()} Palmex Agro-Industrielle. Tous droits réservés.</p>
+
         </div>
 
       </div>
